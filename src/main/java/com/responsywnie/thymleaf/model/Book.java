@@ -15,13 +15,13 @@ public class Book {
     @Column(name = "author")
     private String author;
     @Column(name = "isbn")
-    private Spring isbn;
+    private String isbn;
     @Column(name = "description")
     private String despription;
     @Column(name = "localization")
     private int localization;
 
-    public Book(String title, String author, Spring isbn, String despription, int localization) {
+    public Book(String title, String author, String isbn, String despription, int localization) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
@@ -56,11 +56,11 @@ public class Book {
         this.author = author;
     }
 
-    public Spring getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(Spring isbn) {
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 

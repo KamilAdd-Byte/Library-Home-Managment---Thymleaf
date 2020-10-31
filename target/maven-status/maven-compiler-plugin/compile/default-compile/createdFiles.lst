@@ -1,0 +1,6 @@
+com/responsywnie/thymleaf/dao/BookDAO.class
+com/responsywnie/thymleaf/service/BookServiceImplementation.class
+com/responsywnie/thymleaf/ThymleafApplication.class
+com/responsywnie/thymleaf/controller/HelloController.class
+com/responsywnie/thymleaf/service/BookService.class
+com/responsywnie/thymleaf/model/Book.class
