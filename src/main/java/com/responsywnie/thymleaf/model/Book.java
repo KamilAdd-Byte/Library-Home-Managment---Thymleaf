@@ -17,15 +17,15 @@ public class Book {
     @Column(name = "isbn")
     private String isbn;
     @Column(name = "description")
-    private String despription;
+    private String description;
     @Column(name = "localization")
     private int localization;
 
-    public Book(String title, String author, String isbn, String despription, int localization) {
+    public Book(String title, String author, String isbn, String description, int localization) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
-        this.despription = despription;
+        this.description = description;
         this.localization = localization;
     }
 
@@ -65,11 +65,11 @@ public class Book {
     }
 
     public String getDespription() {
-        return despription;
+        return description;
     }
 
     public void setDespription(String despription) {
-        this.despription = despription;
+        this.description = despription;
     }
 
     public int getLocalization() {
@@ -90,11 +90,11 @@ public class Book {
                 title.equals(book.title) &&
                 author.equals(book.author) &&
                 isbn.equals(book.isbn) &&
-                despription.equals(book.despription);
+                description.equals(book.description);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, author, isbn, despription, localization);
+        return Objects.hash(id, title, author, isbn, description, localization);
     }
 }
