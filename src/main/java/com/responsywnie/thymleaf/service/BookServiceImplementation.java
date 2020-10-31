@@ -16,4 +16,9 @@ public class BookServiceImplementation implements BookService{
     public List<Book> getAllBooks() {
         return bookDAO.findAll();
     }
+
+    @Override
+    public void saveBook(Book book) {
+        this.bookDAO.save(book);
+    }
 }
