@@ -1,6 +1,7 @@
 package com.responsywnie.thymleaf.model;
 
 import javax.persistence.*;
+import javax.swing.*;
 import java.util.Objects;
 
 @Entity
@@ -14,18 +15,21 @@ public class Book {
     @Column(name = "author")
     private String author;
     @Column(name = "isbn")
-    private int isbn;
+    private Spring isbn;
     @Column(name = "description")
     private String despription;
     @Column(name = "localization")
     private int localization;
 
-    public Book(String title, String author, int isbn, String despription, int localization) {
+    public Book(String title, String author, Spring isbn, String despription, int localization) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
         this.despription = despription;
         this.localization = localization;
+    }
+
+    public Book() {
     }
 
     public long getId() {
@@ -52,11 +56,11 @@ public class Book {
         this.author = author;
     }
 
-    public int getIsbn() {
+    public Spring getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(int isbn) {
+    public void setIsbn(Spring isbn) {
         this.isbn = isbn;
     }
 
@@ -82,10 +86,10 @@ public class Book {
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
         return id == book.id &&
-                isbn == book.isbn &&
                 localization == book.localization &&
                 title.equals(book.title) &&
                 author.equals(book.author) &&
+                isbn.equals(book.isbn) &&
                 despription.equals(book.despription);
     }
 
