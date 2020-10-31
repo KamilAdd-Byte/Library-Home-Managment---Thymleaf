@@ -12,8 +12,18 @@
 		<h1>System wprowadzania książki do bazy danych</h1>
 		<hr>
 		<h2>Książka</h2>
-		  <form action="#" th:action="@{/saveBook}" th:object="book" method="POST">
-
+		  <form action="#" th:action="@{/saveBook}" th:object="${book}" method="POST">
+             <input type="text" th:field = "*{title}"
+					placeholder="Book Title" class="form-control mb-4 col-4">
+			  <input type="text" th:field = "*{author}"
+					 placeholder="Book Author" class="form-control mb-4 col-4">
+			  <input type="text" th:field = "*{isbn}"
+					 placeholder="Book Isbn" class="form-control mb-4 col-4">
+			  <input type="text" th:field = "*{despription}"
+					 placeholder="Book Description" class="form-control mb-4 col-4">
+			  <input type="text" th:field = "*{localization}"
+					 placeholder="Book Localization" class="form-control mb-4 col-4">
+			  <button type="submit" >Dodaj książkę</button>
 		  </form>
 	</div>
 </body>
