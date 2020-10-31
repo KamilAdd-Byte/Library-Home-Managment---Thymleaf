@@ -7,6 +7,26 @@
 <body th:background="black">
     <h1 align="central">Kursik z silnikiem thymleaf</h1>
     <p th:align="central">Hello world thymleaf</p>
-<p th:text="${name}"></p>
+<p th:text="${listBooks}"></p>
+
+<div th:align="center">
+    <h1>Book List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Tytuł książki</th>
+                <th>Autor książki</th>
+                <th>Isbn książki</th>
+                <th>Opis książki</th>
+                <th>Lokalizacja książki</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+    </table>
+</div>
+
 </body>
 </html>
