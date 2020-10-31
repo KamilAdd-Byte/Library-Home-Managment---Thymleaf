@@ -5,9 +5,9 @@
     <title>Library Managment System</title>
 </head>
 <body th:background="black">
-    <h1 align="central">Kursik z silnikiem thymleaf</h1>
-    <p th:align="central">Hello world thymleaf</p>
-<p th:text="${listBooks}"></p>
+    <h1 align="center">Baza książek z silnikiem thymleaf</h1>
+    <p th:align="center">Spring Thymleaf MySQL</p>
+<!--<p th:text="${listBooks}"></p>-->
 
 <div th:align="center">
     <h1>Book List</h1>
@@ -22,6 +22,13 @@
             </tr>
         </thead>
         <tbody>
+            <tr th:each="book : ${listBooks}">
+                <td th:text="${book.title}"></td>
+                <td th:text="${book.author}"></td>
+                <td th:text="${book.isbn}"></td>
+                <td th:text="${book.despription}"></td>
+                <td th:text="${book.localization}"></td>
+            </tr>
 
         </tbody>
 
