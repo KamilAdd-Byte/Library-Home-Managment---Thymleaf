@@ -11,9 +11,9 @@
     <h1 align="center">Baza książek Kasi i Kamila z silnikiem thymleaf</h1>
     <p th:align="center">Spring Thymleaf MySQL</p>
 
-<div th:align="center" class="container my-2">
-    <a th:href="@{/showNewBook}"> Dodaj książkę</a>
+    <div th:align="center" class="container my-2">
     <h1>Book List</h1>
+        <a th:href="@{/showNewBook}" class="btn btn-primary btn-sm mb-2"> Dodaj książkę</a>
     <table th:border="3" th:background="ref" class="table table-striped table-responsive-md">
         <thead>
             <tr>
