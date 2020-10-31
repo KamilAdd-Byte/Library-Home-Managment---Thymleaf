@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
-<head >
+<head>
     <meta charset="UTF-8">
     <title>Library Managment System</title>
 </head>
-<body th:background="black">
-    <h1 align="center">Baza książek z silnikiem thymleaf</h1>
+<body>
+    <h1 align="center">Baza książek Kasi i Kamila z silnikiem thymleaf</h1>
     <p th:align="center">Spring Thymleaf MySQL</p>
-<!--<p th:text="${listBooks}"></p>-->
 
 <div th:align="center">
     <h1>Book List</h1>
-    <table>
+    <table th:border="2">
         <thead>
             <tr>
                 <th>Tytuł książki</th>
@@ -29,7 +28,6 @@
                 <td th:text="${book.despription}"></td>
                 <td th:text="${book.localization}"></td>
             </tr>
-
         </tbody>
 
     </table>
