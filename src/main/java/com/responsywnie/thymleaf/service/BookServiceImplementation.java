@@ -5,6 +5,7 @@ import com.responsywnie.thymleaf.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,4 +40,13 @@ public class BookServiceImplementation implements BookService{
     public void deleteBook(long id) {
         this.bookDAO.deleteById(id);
     }
+
+    @Override
+    public List<Book> findBookByTitle(Book book) {
+        List<Book> bookList = new ArrayList<>();
+        this.bookDAO.findAll();
+        return bookList;
+    }
+
+
 }

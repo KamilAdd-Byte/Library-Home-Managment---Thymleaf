@@ -25,7 +25,7 @@ public class HelloController {
     public String showNewBookForm(Model model){
         Book book = new Book();
         model.addAttribute("book",book);
-        return "new book";
+        return "new_book";
     }
     @PostMapping("/saveBook")
     public String saveBook(@ModelAttribute("book") Book book){
@@ -36,11 +36,16 @@ public class HelloController {
     public String getBookByID(@PathVariable (value = "id") long id, Model model){
         Book book = bookService.getBookByID(id);
         model.addAttribute("book",book);
-        return "update book";
+        return "update_book";
     }
     @GetMapping("/deleteBook/{id}")
     public String deleteBook(@PathVariable (value = "id") long id){
         this.bookService.deleteBook(id);
         return "redirect:/";
+    }
+    @GetMapping("/findBookForm")
+    public String findBookByTitle(@ModelAttribute("book") Book book){
+        this.bookService.findBookByTitle(book);
+        return "find_book";
     }
 }

@@ -12,12 +12,15 @@
         <p th:align="center">Spring Thymleaf MySQL</p>
                             <!--TU ZACZYNA SIĘ TABELA:-->
         <div th:align="center" class="container my-2">
-           <h1>Book List</h1>
+           <h1>Lista książek w domowej bibliotece</h1>
             <!--            TU JEST PRZYCISK DODAJ-->
              <a th:href="@{/showNewBookForm}" class="btn btn-primary btn-sm mb-2"> Dodaj książkę</a>
-                 <table th:border="3"  class="table table-striped table-responsive-md">
+             <a th:href="@{/findBookForm}" class="btn btn-primary btn-sm mb-2"> Znajdź książkę</a>
+
+            <table th:border="3"  class="table table-striped table-responsive-md">
                          <thead>
                             <tr>
+                             <th> ID </th>
                              <th>Tytuł książki</th>
                              <th>Autor książki</th>
                              <th>Isbn książki</th>
@@ -28,6 +31,7 @@
                          </thead>
                          <tbody>
                             <tr th:each="book : ${listBooks}">
+                                <td th:text="${book.id}"></td>
                                 <td th:text="${book.title}"></td>
                                 <td th:text="${book.author}"></td>
                                 <td th:text="${book.isbn}"></td>
@@ -39,8 +43,8 @@
                                 </td>
                             </tr>
                         </tbody>
-                 </table>
-        </div>
 
+                 </table>
+             </div>
 </body>
 </html>
