@@ -23,6 +23,7 @@
                              <th>Isbn książki</th>
                              <th>Opis książki</th>
                              <th>Lokalizacja książki</th>
+                             <th> Operacje </th>
                             </tr>
                          </thead>
                          <tbody>
@@ -32,6 +33,9 @@
                                 <td th:text="${book.isbn}"></td>
                                 <td th:text="${book.despription}"></td>
                                 <td th:text="${book.localization}"></td>
+                                <td th:align="center"> <a th:href="@{/showBookFromUpdate/{id}(id=${book.id})}" class="btn btn-primary">Zmień dane</a>
+                                     <a th:href="@{/showBookDelete/{id}(id=${book.id})}" class="btn btn-primary">Usuń</a>
+                                </td>
                             </tr>
                         </tbody>
                  </table>
