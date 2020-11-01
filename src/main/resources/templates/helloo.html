@@ -20,6 +20,7 @@
             <table th:border="3"  class="table table-striped table-responsive-md">
                          <thead>
                             <tr>
+                             <th> ID </th>
                              <th>Tytuł książki</th>
                              <th>Autor książki</th>
                              <th>Isbn książki</th>
@@ -30,6 +31,7 @@
                          </thead>
                          <tbody>
                             <tr th:each="book : ${listBooks}">
+                                <td th:text="${book.id}"></td>
                                 <td th:text="${book.title}"></td>
                                 <td th:text="${book.author}"></td>
                                 <td th:text="${book.isbn}"></td>
