@@ -39,4 +39,11 @@ public class BookServiceImplementation implements BookService{
     public void deleteBook(long id) {
         this.bookDAO.deleteById(id);
     }
+
+    @Override
+    public void findBookByTitle(Book book) {
+        bookDAO.findAll();
+    }
+
+
 }

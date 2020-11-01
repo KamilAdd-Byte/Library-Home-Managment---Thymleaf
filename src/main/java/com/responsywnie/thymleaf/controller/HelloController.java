@@ -43,4 +43,9 @@ public class HelloController {
         this.bookService.deleteBook(id);
         return "redirect:/";
     }
+    @GetMapping("/findBookForm")
+    public String findBookByTitle(@ModelAttribute("book") Book book){
+        this.bookService.findBookByTitle(book);
+        return "find book";
+    }
 }
