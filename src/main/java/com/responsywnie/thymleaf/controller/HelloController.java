@@ -44,7 +44,7 @@ public class HelloController {
         return "redirect:/";
     }
     @GetMapping("/findBookForm")
-    public String findBookByTitle(@ModelAttribute("book") Book book){
+    public String findBookByTitle(@ModelAttribute("title") Book book){
         this.bookService.findBookByTitle(book);
         return "find book";
     }

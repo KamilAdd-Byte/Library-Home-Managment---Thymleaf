@@ -8,8 +8,19 @@
 		  crossorigin="anonymous">
 </head>
 <body>
-
+<div th:align="center" th:size="full" class="container">
+<hr>
+<h2>Książka</h2>
+<form action="#" th:action="@{/findBookForm}" th:object="${title}" method="POST">
+	<input type="text" th:field = "*{title}"
+		   placeholder="Tytuł książki" class="form-control mb-4 col-4">
+	<output></output>
+	<button type="submit" >Znajdź</button>
+	<button type="reset">Wyczyść</button>
+	<!--			  <button th:action="@{/showNewBookForm}">Wróć</button>-->
+</form>
 	<hr>
 	<a th:href="@{/}"> Wróć na stronę główną</a>
+</div>
 </body>
 </html>
