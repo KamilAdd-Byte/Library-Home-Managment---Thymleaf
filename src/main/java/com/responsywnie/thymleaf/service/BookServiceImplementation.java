@@ -34,4 +34,9 @@ public class BookServiceImplementation implements BookService{
             throw new RuntimeException("Książka nie znaleziona po ID :: " + id);
         return book;
     }
+
+    @Override
+    public void deleteBook(long id) {
+        this.bookDAO.deleteById(id);
+    }
 }

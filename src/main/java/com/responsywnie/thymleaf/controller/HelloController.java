@@ -38,4 +38,9 @@ public class HelloController {
         model.addAttribute("book",book);
         return "update book";
     }
+    @GetMapping("/deleteBook/{id}")
+    public String deleteBook(@PathVariable (value = "id") long id){
+        this.bookService.deleteBook(id);
+        return "redirect:/";
+    }
 }
