@@ -12,7 +12,7 @@
         <p th:align="center">Spring Thymleaf MySQL</p>
                             <!--TU ZACZYNA SIĘ TABELA:-->
         <div th:align="center" class="container my-2">
-           <h1>Book List</h1>
+           <h1>Lista książek w domowej bibliotece</h1>
             <!--            TU JEST PRZYCISK DODAJ-->
              <a th:href="@{/showNewBookForm}" class="btn btn-primary btn-sm mb-2"> Dodaj książkę</a>
              <a th:href="@{/findBookForm}" class="btn btn-primary btn-sm mb-2"> Znajdź książkę</a>
@@ -43,6 +43,7 @@
                                 </td>
                             </tr>
                         </tbody>
+
                  </table>
              </div>
 </body>

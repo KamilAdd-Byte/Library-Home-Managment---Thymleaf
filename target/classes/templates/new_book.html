@@ -21,6 +21,7 @@
 					placeholder="Tytuł książki" class="form-control mb-4 col-4">
 			  <input type="text" th:field = "*{author}"
 					 placeholder="Autor książki" class="form-control mb-4 col-4">
+			  <span id="author.errors">size must be between 2 and 30</span>
 			  <input type="text" th:field = "*{isbn}"
 					 placeholder="Isbn (np: 93455432334)" class="form-control mb-4 col-4">
 			  <input type="text" th:field = "*{despription}"
