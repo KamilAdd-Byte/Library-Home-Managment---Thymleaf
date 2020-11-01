@@ -15,7 +15,7 @@
 	<input type="text" th:field="*{title}"
 		   placeholder="Tytuł książki" class="form-control mb-4 col-4">
 
-	<a th:href="@{/findBookForm/{title}(title=${book.title})}"> Znajdź </a>
+	<button type="submit">Znajdź</button>
 	<button type="reset">Wyczyść</button>
 	<!--			  <button th:action="@{/showNewBookForm}">Wróć</button>-->
 </form>
