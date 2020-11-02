@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class HelloController {
 
@@ -42,10 +44,5 @@ public class HelloController {
     public String deleteBook(@PathVariable (value = "id") long id){
         this.bookService.deleteBook(id);
         return "redirect:/";
-    }
-    @GetMapping("/findBookForm")
-    public String findBookByTitle(@ModelAttribute("book") Book book){
-        this.bookService.findBookByTitle(book);
-        return "find_book";
     }
 }
