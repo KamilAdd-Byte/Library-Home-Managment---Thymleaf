@@ -2,6 +2,7 @@ package com.responsywnie.thymleaf.model;
 
 import javax.persistence.*;
 import javax.swing.*;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
