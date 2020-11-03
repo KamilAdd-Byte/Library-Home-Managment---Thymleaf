@@ -2,7 +2,6 @@ package com.responsywnie.thymleaf.controller;
 
 import com.responsywnie.thymleaf.model.Book;
 import com.responsywnie.thymleaf.service.BookService;
-import net.bytebuddy.implementation.bind.annotation.BindingPriority;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,7 +32,7 @@ public class HelloController {
         model.addAttribute("book",book);
         return "new_book";
     }
-    @PostMapping("/")
+    @PostMapping("/showNewBookForm")
     public String consumeForm(@Valid @ModelAttribute Book book, BindingResult bindingResult){
         if (bindingResult.hasErrors()){
             List<ObjectError>errorList = bindingResult.getAllErrors();
@@ -43,7 +42,7 @@ public class HelloController {
     }
 
     @PostMapping("/saveBook")
-    public String saveBook(@ModelAttribute("book") Book book){
+    public String saveBook(@Valid @ModelAttribute("book") Book book){
         bookService.saveBook(book);
         return "redirect:/";
     }

@@ -117,8 +117,6 @@
     <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-core:2.5.0-b44" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-config:2.5.0-b44" level="project" />
     <orderEntry type="library" name="Maven: org.jvnet:tiger-types:1.4" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate:hibernate-validator:5.2.4.Final" level="project" />
-    <orderEntry type="library" name="Maven: javax.validation:validation-api:2.0.1.Final" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-locator:2.5.0-b44" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.hk2.external:javax.inject:2.5.0-b44" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-runlevel:2.5.0-b44" level="project" />
@@ -132,6 +130,7 @@
     <orderEntry type="library" name="Maven: org.glassfish.grizzly:grizzly-http-server:2.4.1" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.main.grizzly:grizzly-config:5.0" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.external:management-api:3.2.1-b002" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-validator:5.4.21" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-validation:2.3.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish:jakarta.el:3.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate.validator:hibernate-validator:6.1.5.Final" level="project" />
