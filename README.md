@@ -4,7 +4,7 @@ Library Home its very simple application. User add book, delete book and update 
 Save book add to data base (MySql). The form save book in Library Home Management is validated. 
 Incorrect data its not entred to data base.  
 
-Actual list book is front page. List book is located in responsive table (Thymleaf and Bootstrap).
+Actual list book is on front page. List book is located in responsive table (Thymleaf and Bootstrap).
 
 # Technology
 
