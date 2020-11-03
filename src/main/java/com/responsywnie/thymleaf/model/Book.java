@@ -1,9 +1,9 @@
 package com.responsywnie.thymleaf.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
-import javax.swing.*;
 import javax.validation.constraints.Size;
-import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -14,17 +14,23 @@ public class Book {
 
     @Column(name = "title",nullable = true,unique = true)
     @Size(min = 3, max = 20)
+    @NotEmpty(message = "Tytuł nie moze tak wygladać")
     private String title;
+
     @Column(name = "author")
     @Size(min = 3, max = 20)
+    @NotEmpty(message = "Tytuł nie moze tak wygladać")
     private String author;
+
     @Column(name = "isbn")
     @Size(min = 3, max = 20)
+    @NotEmpty(message = "Tytuł nie moze tak wygladać")
     private String isbn;
+
     @Column(name = "description")
     private String description;
+
     @Column(name = "localization")
-    @Size(min = 1, max = 3)
     private int localization;
 
     public Book(String title, String author, String isbn, String description, int localization) {
@@ -70,12 +76,12 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public String getDespription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDespription(String despription) {
-        this.description = despription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getLocalization() {
@@ -96,7 +102,7 @@ public class Book {
                 title.equals(book.title) &&
                 author.equals(book.author) &&
                 isbn.equals(book.isbn) &&
-                description.equals(book.description);
+                Objects.equals(description, book.description);
     }
 
     @Override

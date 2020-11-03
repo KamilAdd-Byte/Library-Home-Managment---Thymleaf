@@ -1,5 +1,6 @@
 /home/kamillodzinski/git_work/biblioteka thymfeaf/Thymleaf/src/main/java/com/responsywnie/thymleaf/service/BookService.java
 /home/kamillodzinski/git_work/biblioteka thymfeaf/Thymleaf/src/main/java/com/responsywnie/thymleaf/controller/HelloController.java
+/home/kamillodzinski/git_work/biblioteka thymfeaf/Thymleaf/src/main/java/com/responsywnie/thymleaf/validation/ValidationConfig.java
 /home/kamillodzinski/git_work/biblioteka thymfeaf/Thymleaf/src/main/java/com/responsywnie/thymleaf/dao/BookDAO.java
 /home/kamillodzinski/git_work/biblioteka thymfeaf/Thymleaf/src/main/java/com/responsywnie/thymleaf/service/BookServiceImplementation.java
 /home/kamillodzinski/git_work/biblioteka thymfeaf/Thymleaf/src/main/java/com/responsywnie/thymleaf/ThymleafApplication.java

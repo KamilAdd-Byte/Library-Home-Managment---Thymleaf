@@ -14,22 +14,29 @@
 
 		<hr>
 		<h2>Książka</h2>
+<!--		<p th:if="validationMessage" th:text="${validationMessage}">Default validation message</p>-->
 		<div>
 			<img align="left"  src="https://www.zsz.edu.pl/images/biblioteka/ksiazki.jpg">
 			<iframe frameborder="0"></iframe>
 		</div>
+		<p th:if="validationMessage" th:text="${validationMessage}">Default validation message</p>
 		  <form action="#" th:action="@{/saveBook}" th:object="${book}" method="POST">
+			 <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}">First name errors</p>
              <input type="text" th:field = "*{title}"
 					placeholder="Tytuł książki" class="form-control mb-4 col-4">
+			  <p th:if="${#fields.hasErrors('author')}" th:errors="*{author}">First name errors</p>
 			  <input type="text" th:field = "*{author}"
 					 placeholder="Autor książki" class="form-control mb-4 col-4">
-			  <span id="author.errors">size must be between 2 and 30</span>
+			  <p th:if="${#fields.hasErrors('isbn')}" th:errors="*{isbn}">First name errors</p>
 			  <input type="text" th:field = "*{isbn}"
 					 placeholder="Isbn (np: 93455432334)" class="form-control mb-4 col-4">
-			  <input type="text" th:field = "*{despription}"
+			  <p th:if="${#fields.hasErrors('description')}" th:errors="*{description}">First name errors</p>
+			  <input type="text" th:field = "*{description}"
 					 placeholder="Opis książki do 240 znaków" class="form-control mb-4 col-4">
+			  <p th:if="${#fields.hasErrors('localization')}" th:errors="*{localization}">First name errors</p>
 			  <input type="text" th:field = "*{localization}"
 					 placeholder="Regał nr" class="form-control mb-4 col-4">
+
 			  <button type="submit" >Dodaj książkę</button>
 <!--			  <button type="reset">Wyczyść</button>-->
 <!--			  <button th:action="@{/showNewBookForm}">Wróć</button>-->
@@ -38,5 +45,7 @@
 				<hr>
 					<a th:href="@{/}"> Wróć na stronę główną</a>
 	</div>
+	<h3 th:if="${#fields.hasErrors('${book.title}')}">Errors:</h3>
+	<p th:errors="${book.title}">Example error</p>
 </body>
 </html>
