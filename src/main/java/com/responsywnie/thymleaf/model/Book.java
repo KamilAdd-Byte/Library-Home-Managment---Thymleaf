@@ -1,8 +1,9 @@
 package com.responsywnie.thymleaf.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
-import javax.swing.*;
-import java.util.List;
+import javax.validation.constraints.Size;
 import java.util.Objects;
 
 @Entity
@@ -12,13 +13,23 @@ public class Book {
     private long id;
 
     @Column(name = "title",nullable = true,unique = true)
+    @Size(min = 3, max = 20)
+    @NotEmpty(message = "{com.responsywnie.thymleaf.model.Book.title.NotEmpty}")
     private String title;
+
     @Column(name = "author")
+    @Size(min = 3, max = 20)
+    @NotEmpty(message = "{com.responsywnie.thymleaf.model.Book.author.NotEmpty}")
     private String author;
+
     @Column(name = "isbn")
+    @Size(min = 3, max = 20)
+    @NotEmpty(message = "{com.responsywnie.thymleaf.model.Book.isbn.NotEmpty}")
     private String isbn;
+
     @Column(name = "description")
     private String description;
+
     @Column(name = "localization")
     private int localization;
 
@@ -65,12 +76,12 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public String getDespription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDespription(String despription) {
-        this.description = despription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getLocalization() {
@@ -91,7 +102,7 @@ public class Book {
                 title.equals(book.title) &&
                 author.equals(book.author) &&
                 isbn.equals(book.isbn) &&
-                description.equals(book.description);
+                Objects.equals(description, book.description);
     }
 
     @Override
