@@ -2,6 +2,7 @@ package com.responsywnie.thymleaf.model;
 
 import javax.persistence.*;
 import javax.swing.*;
+import javax.validation.constraints.Size;
 import java.util.List;
 import java.util.Objects;
 
@@ -12,14 +13,18 @@ public class Book {
     private long id;
 
     @Column(name = "title",nullable = true,unique = true)
+    @Size(min = 3, max = 20)
     private String title;
     @Column(name = "author")
+    @Size(min = 3, max = 20)
     private String author;
     @Column(name = "isbn")
+    @Size(min = 3, max = 20)
     private String isbn;
     @Column(name = "description")
     private String description;
     @Column(name = "localization")
+    @Size(min = 1, max = 3)
     private int localization;
 
     public Book(String title, String author, String isbn, String description, int localization) {
