@@ -14,17 +14,17 @@ public class Book {
 
     @Column(name = "title",nullable = true,unique = true)
     @Size(min = 3, max = 20)
-    @NotEmpty(message = "Tytuł nie moze tak wygladać")
+    @NotEmpty(message = "{com.responsywnie.thymleaf.model.Book.title.NotEmpty}")
     private String title;
 
     @Column(name = "author")
     @Size(min = 3, max = 20)
-    @NotEmpty(message = "Tytuł nie moze tak wygladać")
+    @NotEmpty(message = "{com.responsywnie.thymleaf.model.Book.author.NotEmpty}")
     private String author;
 
     @Column(name = "isbn")
     @Size(min = 3, max = 20)
-    @NotEmpty(message = "Tytuł nie moze tak wygladać")
+    @NotEmpty(message = "{com.responsywnie.thymleaf.model.Book.isbn.NotEmpty}")
     private String isbn;
 
     @Column(name = "description")

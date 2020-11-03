@@ -9,25 +9,22 @@
 </head>
 <body>
 
-	<div th:align="right" class="container">
+	<div th:align="center" class="container">
 		<h1>System wprowadzania książki do bazy danych</h1>
-
-		<hr>
-		<h2>Książka</h2>
-
+		<p th:if="validationMessage" th:text="${validationMessage}">Default validation message</p>
 		<div>
-			<img align="left"  src="https://www.zsz.edu.pl/images/biblioteka/ksiazki.jpg">
-			<iframe frameborder="0"></iframe>
+			<img th:align="center" src="https://www.zsz.edu.pl/images/biblioteka/ksiazki.jpg" class="img-responsive"
+				 alt="Responsive image">
 		</div>
 
 		  <form action="#" th:action="@{/saveBook}" th:object="${book}" method="POST">
-<!--			 <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Title errors</p>-->
+			 <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Title errors</p>
              <input type="text" th:field = "*{title}"
 					placeholder="Tytuł książki" class="form-control mb-4 col-4">
-<!--			  <p th:if="${#fields.hasErrors('author')}" th:errors="*{author}">Author errors</p>-->
+			  <p th:if="${#fields.hasErrors('author')}" th:errors="*{author}">Author errors</p>
 			  <input type="text" th:field = "*{author}"
 					 placeholder="Autor książki" class="form-control mb-4 col-4">
-<!--			  <p th:if="${#fields.hasErrors('isbn')}" th:errors="*{isbn}">isbn errors</p>-->
+			  <p th:if="${#fields.hasErrors('isbn')}" th:errors="*{isbn}">isbn errors</p>
 			  <input type="text" th:field = "*{isbn}"
 					 placeholder="Isbn (np: 93455432334)" class="form-control mb-4 col-4">
 			  <input type="text" th:field = "*{description}"
@@ -40,7 +37,13 @@
 <!--			  <button th:action="@{/showNewBookForm}">Wróć</button>-->
 
 		  </form>
-				<hr>
+<!--		<div>-->
+<!--			<h3 th:if="${#fields.hasErrors('${book}')}">Errors:</h3>-->
+<!--			<p th:errors="${book.title}">Example error</p>-->
+<!--			<p th:errors="${book.author}">Example error</p>-->
+<!--			<p th:errors="${book.isbn}">Example error</p>-->
+<!--		</div>-->
+
 					<a th:href="@{/}"> Wróć na stronę główną</a>
 	</div>
 

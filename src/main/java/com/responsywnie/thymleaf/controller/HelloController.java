@@ -42,10 +42,17 @@ public class HelloController {
     }
 
     @PostMapping("/saveBook")
-    public String saveBook(@Valid @ModelAttribute("book") Book book){
-        bookService.saveBook(book);
-        return "redirect:/";
+    public String saveBook(@Valid @ModelAttribute("book") Book book,BindingResult bindingResult){
+        if (bindingResult.hasErrors()){
+            List<ObjectError>errorList=bindingResult.getAllErrors();
+            errorList.forEach(objectError -> System.out.println(objectError.getDefaultMessage()));
+            return "new_book";
+        }else {
+            bookService.saveBook(book);
+            return "redirect:/";
+        }
     }
+
     @GetMapping("/showBookFromUpdate/{id}")
     public String getBookByID(@PathVariable (value = "id") long id, Model model){
         Book book = bookService.getBookByID(id);
