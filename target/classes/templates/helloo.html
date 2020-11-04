@@ -10,13 +10,13 @@
 <body>
 
         <div th:align="center" class="container my-2">
-           <h1>Lista książek w domowej bibliotece</h1>
+           <h1>Library Home Managment</h1>
             <!--            TU JEST PRZYCISK DODAJ-->
              <a th:href="@{/showNewBookForm}" class="btn btn-warning btn-lg mb-2"> Dodaj książkę</a>
              <a th:href="@{/findBookForm}" class="btn btn-warning btn-lg mb-2"> Znajdź książkę</a>
 
-            <table th:border="3"  class="table table-striped table-responsive-md">
-                         <thead>
+            <table th:border="3"  class="table table-striped table-responsive-sm">
+                         <thead class="thead-dark">
                             <tr>
                              <th> ID </th>
                              <th>Tytuł książki</th>
